@@ -53,5 +53,11 @@ namespace CursoWindowsForms
             Frm_ValidaSenha f = new Frm_ValidaSenha();
             f.ShowDialog();
         }
+
+        private void Btn_Celular_Click(object sender, EventArgs e)
+        {
+            Frm_Celular f = new Frm_Celular();
+            f.ShowDialog();
+        }
     }
 }

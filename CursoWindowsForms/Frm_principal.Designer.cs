@@ -35,6 +35,7 @@
             Btn_ValidaCpf = new Button();
             Btn_ValidaCpf2 = new Button();
             Btn_ValidaSenha = new Button();
+            Btn_Celular = new Button();
             SuspendLayout();
             // 
             // Btn_demonstracaoKey
@@ -103,11 +104,22 @@
             Btn_ValidaSenha.UseVisualStyleBackColor = true;
             Btn_ValidaSenha.Click += Btn_ValidaSenha_Click;
             // 
+            // Btn_Celular
+            // 
+            Btn_Celular.Location = new Point(132, 122);
+            Btn_Celular.Name = "Btn_Celular";
+            Btn_Celular.Size = new Size(114, 48);
+            Btn_Celular.TabIndex = 6;
+            Btn_Celular.Text = "Celular";
+            Btn_Celular.UseVisualStyleBackColor = true;
+            Btn_Celular.Click += Btn_Celular_Click;
+            // 
             // Frm_principal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(375, 121);
+            ClientSize = new Size(375, 211);
+            Controls.Add(Btn_Celular);
             Controls.Add(Btn_ValidaSenha);
             Controls.Add(Btn_ValidaCpf2);
             Controls.Add(Btn_ValidaCpf);
@@ -129,5 +141,6 @@
         private Button Btn_ValidaCpf;
         private Button Btn_ValidaCpf2;
         private Button Btn_ValidaSenha;
+        private Button Btn_Celular;
     }
 }

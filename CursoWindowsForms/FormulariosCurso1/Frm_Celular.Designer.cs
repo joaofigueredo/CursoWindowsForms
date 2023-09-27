@@ -59,6 +59,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(Msk_Celular);
             Controls.Add(Btn_validaCelular);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Frm_Celular";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Celular";

@@ -37,6 +37,7 @@
             // 
             // Btn_Reset
             // 
+            Btn_Reset.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Btn_Reset.Location = new Point(245, 42);
             Btn_Reset.Name = "Btn_Reset";
             Btn_Reset.Size = new Size(111, 28);
@@ -47,6 +48,7 @@
             // 
             // Txt_Senha
             // 
+            Txt_Senha.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             Txt_Senha.BorderStyle = BorderStyle.FixedSingle;
             Txt_Senha.Location = new Point(12, 45);
             Txt_Senha.Name = "Txt_Senha";
@@ -57,6 +59,7 @@
             // 
             // Lbl_Resultado
             // 
+            Lbl_Resultado.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             Lbl_Resultado.AutoSize = true;
             Lbl_Resultado.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             Lbl_Resultado.Location = new Point(12, 90);
@@ -66,6 +69,7 @@
             // 
             // Btn_VerSenha
             // 
+            Btn_VerSenha.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Btn_VerSenha.Location = new Point(245, 76);
             Btn_VerSenha.Name = "Btn_VerSenha";
             Btn_VerSenha.Size = new Size(111, 28);
@@ -78,7 +82,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(372, 237);
             Controls.Add(Btn_VerSenha);
             Controls.Add(Lbl_Resultado);
             Controls.Add(Txt_Senha);

@@ -29,7 +29,7 @@ namespace CursoWindowsForms
 
         private void Btn_validaCelular_Click(object sender, EventArgs e)
         {
-            
+
             string vConteudo;
             vConteudo = Msk_Celular.Text;
             vConteudo = vConteudo.Replace("(", "").Replace(")", "").Replace("-", "");
@@ -42,7 +42,8 @@ namespace CursoWindowsForms
             else if (vConteudo.Length < 11)
             {
                 MessageBox.Show("Um numero de celular tem 11 digitos", "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else if (vConteudo.Length == 11)
+            }
+            else if (vConteudo.Length == 11)
             {
                 MessageBox.Show("Numero Válido!", "Mensagem de validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

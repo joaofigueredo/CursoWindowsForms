@@ -152,7 +152,9 @@
             Controls.Add(Lbl_MascaraAtiva);
             Controls.Add(Lbl_Conteudo);
             Controls.Add(Msk_TextBox);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Frm_Mascara";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Exemplos de Mascara";

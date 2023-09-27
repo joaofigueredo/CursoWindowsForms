@@ -57,6 +57,7 @@
             // 
             // Btn_Reset
             // 
+            Btn_Reset.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Btn_Reset.Location = new Point(245, 42);
             Btn_Reset.Name = "Btn_Reset";
             Btn_Reset.Size = new Size(111, 35);
@@ -67,6 +68,7 @@
             // 
             // Btn_Valida
             // 
+            Btn_Valida.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Btn_Valida.Location = new Point(245, 83);
             Btn_Valida.Name = "Btn_Valida";
             Btn_Valida.Size = new Size(109, 34);

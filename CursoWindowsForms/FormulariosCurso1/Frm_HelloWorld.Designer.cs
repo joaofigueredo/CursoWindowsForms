@@ -48,7 +48,8 @@
             // 
             // Btn_Sair
             // 
-            Btn_Sair.Location = new Point(592, 365);
+            Btn_Sair.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            Btn_Sair.Location = new Point(622, 369);
             Btn_Sair.Name = "Btn_Sair";
             Btn_Sair.Size = new Size(166, 29);
             Btn_Sair.TabIndex = 1;
@@ -68,6 +69,7 @@
             // 
             // txt_ConteudoLabel
             // 
+            txt_ConteudoLabel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txt_ConteudoLabel.BorderStyle = BorderStyle.FixedSingle;
             txt_ConteudoLabel.Location = new Point(12, 146);
             txt_ConteudoLabel.Name = "txt_ConteudoLabel";
@@ -78,7 +80,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 410);
             Controls.Add(txt_ConteudoLabel);
             Controls.Add(Btn_modificaLabel);
             Controls.Add(Btn_Sair);

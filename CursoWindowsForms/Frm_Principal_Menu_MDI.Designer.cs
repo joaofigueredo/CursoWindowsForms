@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal_Menu));
             Mnu_Principal = new MenuStrip();
             arquivoToolStripMenuItem = new ToolStripMenuItem();
             formulárioToolStripMenuItem = new ToolStripMenuItem();
@@ -40,13 +39,17 @@
             validaSenhaToolStripMenuItem = new ToolStripMenuItem();
             celularToolStripMenuItem = new ToolStripMenuItem();
             arquivoToolStripMenuItem1 = new ToolStripMenuItem();
+            windowsToolStripMenuItem = new ToolStripMenuItem();
+            cascataToolStripMenuItem = new ToolStripMenuItem();
+            horizontalToolStripMenuItem = new ToolStripMenuItem();
+            verticalToolStripMenuItem = new ToolStripMenuItem();
             Mnu_Principal.SuspendLayout();
             SuspendLayout();
             // 
             // Mnu_Principal
             // 
             Mnu_Principal.ImageScalingSize = new Size(20, 20);
-            Mnu_Principal.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem });
+            Mnu_Principal.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, windowsToolStripMenuItem });
             Mnu_Principal.Location = new Point(0, 0);
             Mnu_Principal.Name = "Mnu_Principal";
             Mnu_Principal.Size = new Size(800, 28);
@@ -64,13 +67,12 @@
             // 
             formulárioToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { demonstraçãoKeyToolStripMenuItem, helloWorldToolStripMenuItem, mascaraToolStripMenuItem, validaCPFToolStripMenuItem, validaCPF2ToolStripMenuItem, validaSenhaToolStripMenuItem, celularToolStripMenuItem });
             formulárioToolStripMenuItem.Name = "formulárioToolStripMenuItem";
-            formulárioToolStripMenuItem.Size = new Size(224, 26);
+            formulárioToolStripMenuItem.Size = new Size(173, 26);
             formulárioToolStripMenuItem.Text = "Novo";
             formulárioToolStripMenuItem.Click += formulárioToolStripMenuItem_Click;
             // 
             // demonstraçãoKeyToolStripMenuItem
             // 
-            demonstraçãoKeyToolStripMenuItem.Image = (Image)resources.GetObject("demonstraçãoKeyToolStripMenuItem.Image");
             demonstraçãoKeyToolStripMenuItem.Name = "demonstraçãoKeyToolStripMenuItem";
             demonstraçãoKeyToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.K;
             demonstraçãoKeyToolStripMenuItem.Size = new Size(264, 26);
@@ -79,7 +81,6 @@
             // 
             // helloWorldToolStripMenuItem
             // 
-            helloWorldToolStripMenuItem.Image = (Image)resources.GetObject("helloWorldToolStripMenuItem.Image");
             helloWorldToolStripMenuItem.Name = "helloWorldToolStripMenuItem";
             helloWorldToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.W;
             helloWorldToolStripMenuItem.Size = new Size(264, 26);
@@ -88,7 +89,6 @@
             // 
             // mascaraToolStripMenuItem
             // 
-            mascaraToolStripMenuItem.Image = (Image)resources.GetObject("mascaraToolStripMenuItem.Image");
             mascaraToolStripMenuItem.Name = "mascaraToolStripMenuItem";
             mascaraToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.M;
             mascaraToolStripMenuItem.Size = new Size(264, 26);
@@ -97,7 +97,6 @@
             // 
             // validaCPFToolStripMenuItem
             // 
-            validaCPFToolStripMenuItem.Image = (Image)resources.GetObject("validaCPFToolStripMenuItem.Image");
             validaCPFToolStripMenuItem.Name = "validaCPFToolStripMenuItem";
             validaCPFToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.C;
             validaCPFToolStripMenuItem.Size = new Size(264, 26);
@@ -106,7 +105,6 @@
             // 
             // validaCPF2ToolStripMenuItem
             // 
-            validaCPF2ToolStripMenuItem.Image = (Image)resources.GetObject("validaCPF2ToolStripMenuItem.Image");
             validaCPF2ToolStripMenuItem.Name = "validaCPF2ToolStripMenuItem";
             validaCPF2ToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.P;
             validaCPF2ToolStripMenuItem.Size = new Size(264, 26);
@@ -115,7 +113,6 @@
             // 
             // validaSenhaToolStripMenuItem
             // 
-            validaSenhaToolStripMenuItem.Image = (Image)resources.GetObject("validaSenhaToolStripMenuItem.Image");
             validaSenhaToolStripMenuItem.Name = "validaSenhaToolStripMenuItem";
             validaSenhaToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.S;
             validaSenhaToolStripMenuItem.Size = new Size(264, 26);
@@ -124,7 +121,6 @@
             // 
             // celularToolStripMenuItem
             // 
-            celularToolStripMenuItem.Image = (Image)resources.GetObject("celularToolStripMenuItem.Image");
             celularToolStripMenuItem.Name = "celularToolStripMenuItem";
             celularToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.E;
             celularToolStripMenuItem.Size = new Size(264, 26);
@@ -135,19 +131,50 @@
             // 
             arquivoToolStripMenuItem1.Name = "arquivoToolStripMenuItem1";
             arquivoToolStripMenuItem1.ShortcutKeys = Keys.Control | Keys.W;
-            arquivoToolStripMenuItem1.Size = new Size(224, 26);
+            arquivoToolStripMenuItem1.Size = new Size(173, 26);
             arquivoToolStripMenuItem1.Text = "Sair";
             arquivoToolStripMenuItem1.Click += arquivoToolStripMenuItem1_Click;
             // 
-            // Frm_Principal_Menu
+            // windowsToolStripMenuItem
+            // 
+            windowsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cascataToolStripMenuItem, horizontalToolStripMenuItem, verticalToolStripMenuItem });
+            windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
+            windowsToolStripMenuItem.Size = new Size(84, 24);
+            windowsToolStripMenuItem.Text = "Windows";
+            // 
+            // cascataToolStripMenuItem
+            // 
+            cascataToolStripMenuItem.Name = "cascataToolStripMenuItem";
+            cascataToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.C;
+            cascataToolStripMenuItem.Size = new Size(224, 26);
+            cascataToolStripMenuItem.Text = "&Cascata";
+            cascataToolStripMenuItem.Click += cascataToolStripMenuItem_Click;
+            // 
+            // horizontalToolStripMenuItem
+            // 
+            horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
+            horizontalToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.H;
+            horizontalToolStripMenuItem.Size = new Size(224, 26);
+            horizontalToolStripMenuItem.Text = "&Horizontal";
+            horizontalToolStripMenuItem.Click += horizontalToolStripMenuItem_Click;
+            // 
+            // verticalToolStripMenuItem
+            // 
+            verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
+            verticalToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.V;
+            verticalToolStripMenuItem.Size = new Size(224, 26);
+            verticalToolStripMenuItem.Text = "&Vertical";
+            verticalToolStripMenuItem.Click += verticalToolStripMenuItem_Click;
+            // 
+            // Frm_Principal_Menu_MDI
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(Mnu_Principal);
-            Icon = (Icon)resources.GetObject("$this.Icon");
+            IsMdiContainer = true;
             MainMenuStrip = Mnu_Principal;
-            Name = "Frm_Principal_Menu";
+            Name = "Frm_Principal_Menu_MDI";
             StartPosition = FormStartPosition.CenterScreen;
             Text = " Principal";
             Load += Frm_Principal_Menu_Load;
@@ -170,5 +197,9 @@
         private ToolStripMenuItem validaSenhaToolStripMenuItem;
         private ToolStripMenuItem celularToolStripMenuItem;
         private ToolStripMenuItem arquivoToolStripMenuItem1;
+        private ToolStripMenuItem windowsToolStripMenuItem;
+        private ToolStripMenuItem cascataToolStripMenuItem;
+        private ToolStripMenuItem horizontalToolStripMenuItem;
+        private ToolStripMenuItem verticalToolStripMenuItem;
     }
 }

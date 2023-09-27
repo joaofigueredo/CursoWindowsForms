@@ -49,18 +49,20 @@
             // 
             // Txt_Msg
             // 
+            Txt_Msg.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Txt_Msg.Location = new Point(8, 40);
             Txt_Msg.Multiline = true;
             Txt_Msg.Name = "Txt_Msg";
             Txt_Msg.ScrollBars = ScrollBars.Vertical;
-            Txt_Msg.Size = new Size(304, 232);
+            Txt_Msg.Size = new Size(267, 235);
             Txt_Msg.TabIndex = 1;
             Txt_Msg.TabStop = false;
             Txt_Msg.TextChanged += Txt_Msg_TextChanged;
             // 
             // Btn_Reset
             // 
-            Btn_Reset.Location = new Point(328, 8);
+            Btn_Reset.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Btn_Reset.Location = new Point(318, 8);
             Btn_Reset.Name = "Btn_Reset";
             Btn_Reset.Size = new Size(75, 28);
             Btn_Reset.TabIndex = 2;
@@ -70,7 +72,8 @@
             // 
             // Lbl_Minus
             // 
-            Lbl_Minus.Location = new Point(320, 104);
+            Lbl_Minus.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Lbl_Minus.Location = new Point(286, 104);
             Lbl_Minus.Name = "Lbl_Minus";
             Lbl_Minus.Size = new Size(48, 20);
             Lbl_Minus.TabIndex = 3;
@@ -78,8 +81,9 @@
             // 
             // Lbl_Maius
             // 
+            Lbl_Maius.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Lbl_Maius.AutoSize = true;
-            Lbl_Maius.Location = new Point(320, 56);
+            Lbl_Maius.Location = new Point(286, 56);
             Lbl_Maius.Name = "Lbl_Maius";
             Lbl_Maius.Size = new Size(48, 20);
             Lbl_Maius.TabIndex = 4;
@@ -87,24 +91,27 @@
             // 
             // Lbl_Upper
             // 
+            Lbl_Upper.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Lbl_Upper.BorderStyle = BorderStyle.Fixed3D;
-            Lbl_Upper.Location = new Point(368, 56);
+            Lbl_Upper.Location = new Point(331, 56);
             Lbl_Upper.Name = "Lbl_Upper";
-            Lbl_Upper.Size = new Size(32, 23);
+            Lbl_Upper.Size = new Size(62, 23);
             Lbl_Upper.TabIndex = 5;
             Lbl_Upper.Click += Lbl_Upper_Click;
             // 
             // Lbl_Lower
             // 
+            Lbl_Lower.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Lbl_Lower.BorderStyle = BorderStyle.Fixed3D;
-            Lbl_Lower.Location = new Point(368, 104);
+            Lbl_Lower.Location = new Point(331, 104);
             Lbl_Lower.Name = "Lbl_Lower";
             Lbl_Lower.Size = new Size(62, 25);
             Lbl_Lower.TabIndex = 6;
             // 
             // Btn_Sair
             // 
-            Btn_Sair.Location = new Point(328, 243);
+            Btn_Sair.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Btn_Sair.Location = new Point(318, 244);
             Btn_Sair.Name = "Btn_Sair";
             Btn_Sair.Size = new Size(75, 28);
             Btn_Sair.TabIndex = 7;
@@ -116,7 +123,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(407, 273);
+            ClientSize = new Size(397, 276);
             Controls.Add(Btn_Sair);
             Controls.Add(Lbl_Lower);
             Controls.Add(Lbl_Upper);

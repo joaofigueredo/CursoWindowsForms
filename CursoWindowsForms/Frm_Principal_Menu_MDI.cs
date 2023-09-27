@@ -31,48 +31,70 @@ namespace CursoWindowsForms
         private void demonstraçãoKeyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_DemonstracaoKeys f = new Frm_DemonstracaoKeys();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void helloWorldToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_HelloWorld f = new Frm_HelloWorld();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void mascaraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_Mascara f = new Frm_Mascara();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void validaCPFToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_ValidaCpf f = new Frm_ValidaCpf();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void validaCPF2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_ValidaCpf2 f = new Frm_ValidaCpf2();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void validaSenhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_ValidaSenha f = new Frm_ValidaSenha();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void celularToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_Celular F = new Frm_Celular();
-            F.ShowDialog();
+            Frm_Celular f = new Frm_Celular();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void arquivoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void cascataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
+        }
+
+        private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.TileHorizontal);
+        }
+
+        private void verticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.TileVertical);
         }
     }
 }

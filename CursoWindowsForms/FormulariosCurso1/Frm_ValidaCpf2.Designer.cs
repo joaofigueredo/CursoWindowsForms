@@ -72,7 +72,9 @@
             Controls.Add(Btn_Valida);
             Controls.Add(Btn_Reset);
             Controls.Add(Msk_CPF);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Frm_ValidaCpf2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Validação CPF";

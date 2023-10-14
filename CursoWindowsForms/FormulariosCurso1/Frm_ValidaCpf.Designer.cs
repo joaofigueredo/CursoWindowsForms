@@ -44,6 +44,7 @@
             Msk_CPF.Name = "Msk_CPF";
             Msk_CPF.Size = new Size(218, 27);
             Msk_CPF.TabIndex = 0;
+            Msk_CPF.MaskInputRejected += Msk_CPF_MaskInputRejected;
             // 
             // Lbl_Resultado
             // 
@@ -54,6 +55,7 @@
             Lbl_Resultado.Size = new Size(77, 27);
             Lbl_Resultado.TabIndex = 1;
             Lbl_Resultado.Text = "label1";
+            Lbl_Resultado.Click += Lbl_Resultado_Click;
             // 
             // Btn_Reset
             // 

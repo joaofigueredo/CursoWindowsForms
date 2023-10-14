@@ -10,6 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Frm_ArquivoImagem_UC.cs" />
+    <Compile Remove="Frm_ArquivoImage_UC.cs" />
+    <Compile Remove="Frm_ArquivoImage_UC.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Frm_ArquivoImage_UC.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Imagens\Frm_Principal.ico" />
   </ItemGroup>
 

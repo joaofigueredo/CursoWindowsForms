@@ -75,6 +75,7 @@
             txt_ConteudoLabel.Name = "txt_ConteudoLabel";
             txt_ConteudoLabel.Size = new Size(536, 27);
             txt_ConteudoLabel.TabIndex = 3;
+            txt_ConteudoLabel.TextChanged += txt_ConteudoLabel_TextChanged;
             // 
             // Frm_HelloWorld
             // 

@@ -34,7 +34,7 @@
             // 
             // Btn_validaCelular
             // 
-            Btn_validaCelular.Location = new Point(12, 105);
+            Btn_validaCelular.Location = new Point(46, 98);
             Btn_validaCelular.Name = "Btn_validaCelular";
             Btn_validaCelular.Size = new Size(94, 29);
             Btn_validaCelular.TabIndex = 0;
@@ -48,7 +48,7 @@
             Msk_Celular.Location = new Point(12, 41);
             Msk_Celular.Mask = "(00)00000-0000";
             Msk_Celular.Name = "Msk_Celular";
-            Msk_Celular.Size = new Size(124, 27);
+            Msk_Celular.Size = new Size(159, 27);
             Msk_Celular.TabIndex = 1;
             Msk_Celular.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
@@ -56,7 +56,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(213, 192);
             Controls.Add(Msk_Celular);
             Controls.Add(Btn_validaCelular);
             FormBorderStyle = FormBorderStyle.FixedSingle;

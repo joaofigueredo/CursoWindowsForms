@@ -9,7 +9,7 @@ namespace CursoWindowsForms
 
         private void Btn_Sair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void lbl_Titulo_Click(object sender, EventArgs e)
@@ -23,6 +23,11 @@ namespace CursoWindowsForms
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_ConteudoLabel_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -11,7 +11,7 @@ namespace CursoWindowsForms
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Frm_Principal_Menu_MDI());
+            Application.Run(new Frm_Principal_Menu_UC());
         }
     }
 }

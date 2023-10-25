@@ -69,6 +69,7 @@
             Txt_Senha.BorderStyle = BorderStyle.FixedSingle;
             Txt_Senha.Location = new Point(122, 89);
             Txt_Senha.Name = "Txt_Senha";
+            Txt_Senha.PasswordChar = '*';
             Txt_Senha.Size = new Size(151, 27);
             Txt_Senha.TabIndex = 3;
             // 

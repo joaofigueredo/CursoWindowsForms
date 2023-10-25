@@ -43,18 +43,21 @@
             celularToolStripMenuItem = new ToolStripMenuItem();
             apagarToolStripMenuItem = new ToolStripMenuItem();
             arquivoToolStripMenuItem1 = new ToolStripMenuItem();
+            desconectarToolStripMenuItem = new ToolStripMenuItem();
+            byteBankToolStripMenuItem = new ToolStripMenuItem();
+            cadastrosToolStripMenuItem = new ToolStripMenuItem();
+            clientesToolStripMenuItem = new ToolStripMenuItem();
             açõesToolStripMenuItem = new ToolStripMenuItem();
             abrirImagemToolStripMenuItem = new ToolStripMenuItem();
             Tbc_Aplicacoes = new TabControl();
             Iml_Imagens = new ImageList(components);
-            desconectarToolStripMenuItem = new ToolStripMenuItem();
             Mnu_Principal.SuspendLayout();
             SuspendLayout();
             // 
             // Mnu_Principal
             // 
             Mnu_Principal.ImageScalingSize = new Size(20, 20);
-            Mnu_Principal.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, açõesToolStripMenuItem });
+            Mnu_Principal.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, byteBankToolStripMenuItem, açõesToolStripMenuItem });
             Mnu_Principal.Location = new Point(0, 0);
             Mnu_Principal.Name = "Mnu_Principal";
             Mnu_Principal.Size = new Size(800, 28);
@@ -71,7 +74,7 @@
             // conectarToolStripMenuItem
             // 
             conectarToolStripMenuItem.Name = "conectarToolStripMenuItem";
-            conectarToolStripMenuItem.Size = new Size(224, 26);
+            conectarToolStripMenuItem.Size = new Size(174, 26);
             conectarToolStripMenuItem.Text = "Conectar";
             conectarToolStripMenuItem.Click += conectarToolStripMenuItem_Click;
             // 
@@ -79,7 +82,7 @@
             // 
             formulárioToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { demonstraçãoKeyToolStripMenuItem, helloWorldToolStripMenuItem, mascaraToolStripMenuItem, validaCPFToolStripMenuItem, validaCPF2ToolStripMenuItem, validaSenhaToolStripMenuItem, celularToolStripMenuItem });
             formulárioToolStripMenuItem.Name = "formulárioToolStripMenuItem";
-            formulárioToolStripMenuItem.Size = new Size(224, 26);
+            formulárioToolStripMenuItem.Size = new Size(174, 26);
             formulárioToolStripMenuItem.Text = "Novo";
             formulárioToolStripMenuItem.Click += formulárioToolStripMenuItem_Click;
             // 
@@ -142,7 +145,7 @@
             // apagarToolStripMenuItem
             // 
             apagarToolStripMenuItem.Name = "apagarToolStripMenuItem";
-            apagarToolStripMenuItem.Size = new Size(224, 26);
+            apagarToolStripMenuItem.Size = new Size(174, 26);
             apagarToolStripMenuItem.Text = "Apagar aba";
             apagarToolStripMenuItem.Click += apagarToolStripMenuItem_Click;
             // 
@@ -150,9 +153,40 @@
             // 
             arquivoToolStripMenuItem1.Name = "arquivoToolStripMenuItem1";
             arquivoToolStripMenuItem1.ShortcutKeys = Keys.Control | Keys.W;
-            arquivoToolStripMenuItem1.Size = new Size(224, 26);
+            arquivoToolStripMenuItem1.Size = new Size(174, 26);
             arquivoToolStripMenuItem1.Text = "Sair";
             arquivoToolStripMenuItem1.Click += arquivoToolStripMenuItem1_Click;
+            // 
+            // desconectarToolStripMenuItem
+            // 
+            desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
+            desconectarToolStripMenuItem.Size = new Size(174, 26);
+            desconectarToolStripMenuItem.Text = "Desconectar";
+            desconectarToolStripMenuItem.Click += desconectarToolStripMenuItem_Click;
+            // 
+            // byteBankToolStripMenuItem
+            // 
+            byteBankToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem });
+            byteBankToolStripMenuItem.Image = Properties.Resources.money_bag;
+            byteBankToolStripMenuItem.Name = "byteBankToolStripMenuItem";
+            byteBankToolStripMenuItem.Size = new Size(104, 24);
+            byteBankToolStripMenuItem.Text = "ByteBank";
+            // 
+            // cadastrosToolStripMenuItem
+            // 
+            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clientesToolStripMenuItem });
+            cadastrosToolStripMenuItem.Image = Properties.Resources.cadastro;
+            cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
+            cadastrosToolStripMenuItem.Size = new Size(157, 26);
+            cadastrosToolStripMenuItem.Text = "Cadastros";
+            // 
+            // clientesToolStripMenuItem
+            // 
+            clientesToolStripMenuItem.Image = Properties.Resources.usuario;
+            clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            clientesToolStripMenuItem.Size = new Size(144, 26);
+            clientesToolStripMenuItem.Text = "Clientes";
+            clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
             // açõesToolStripMenuItem
             // 
@@ -177,6 +211,7 @@
             Tbc_Aplicacoes.SelectedIndex = 0;
             Tbc_Aplicacoes.Size = new Size(800, 422);
             Tbc_Aplicacoes.TabIndex = 1;
+            Tbc_Aplicacoes.MouseDown += Tbc_Aplicacoes_MouseDown;
             // 
             // Iml_Imagens
             // 
@@ -190,13 +225,7 @@
             Iml_Imagens.Images.SetKeyName(4, "Frm_ValidaCPF2.png");
             Iml_Imagens.Images.SetKeyName(5, "Frm_ValidaSenha.png");
             Iml_Imagens.Images.SetKeyName(6, "file-and-folder.png");
-            // 
-            // desconectarToolStripMenuItem
-            // 
-            desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
-            desconectarToolStripMenuItem.Size = new Size(224, 26);
-            desconectarToolStripMenuItem.Text = "Desconectar";
-            desconectarToolStripMenuItem.Click += desconectarToolStripMenuItem_Click;
+            Iml_Imagens.Images.SetKeyName(7, "usuario.png");
             // 
             // Frm_Principal_Menu_UC
             // 
@@ -235,5 +264,8 @@
         private ToolStripMenuItem abrirImagemToolStripMenuItem;
         private ToolStripMenuItem conectarToolStripMenuItem;
         private ToolStripMenuItem desconectarToolStripMenuItem;
+        private ToolStripMenuItem byteBankToolStripMenuItem;
+        private ToolStripMenuItem cadastrosToolStripMenuItem;
+        private ToolStripMenuItem clientesToolStripMenuItem;
     }
 }

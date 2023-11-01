@@ -84,7 +84,6 @@
             formulárioToolStripMenuItem.Name = "formulárioToolStripMenuItem";
             formulárioToolStripMenuItem.Size = new Size(174, 26);
             formulárioToolStripMenuItem.Text = "Novo";
-            formulárioToolStripMenuItem.Click += formulárioToolStripMenuItem_Click;
             // 
             // demonstraçãoKeyToolStripMenuItem
             // 

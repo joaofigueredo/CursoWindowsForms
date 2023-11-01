@@ -33,13 +33,6 @@ namespace CursoWindowsForms
 
         }
 
-        private void formulárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void demonstraçãoKeyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ControleDemonstracaoKeys++;
@@ -139,7 +132,6 @@ namespace CursoWindowsForms
             {
                 MessageBox.Show("Nenhuma aba aberta");
             }
-
         }
 
         private void abrirImagemToolStripMenuItem_Click(object sender, EventArgs e)
@@ -189,7 +181,7 @@ namespace CursoWindowsForms
                 }
                 else
                 {
-                    MessageBox.Show("Senha invalida" + login + " !", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Senha invalida, tente novamente!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -201,13 +193,10 @@ namespace CursoWindowsForms
 
             if (Db.DialogResult == DialogResult.Yes)
             {
-                //Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.SelectedTab);
-
                 for (int i = Tbc_Aplicacoes.TabPages.Count - 1; i >= 0; i--)
                 {
                     ApagaAba(Tbc_Aplicacoes.TabPages[i]);
                 }
-
 
                 formulárioToolStripMenuItem.Enabled = false;
                 apagarToolStripMenuItem.Enabled = false;
@@ -215,7 +204,6 @@ namespace CursoWindowsForms
                 conectarToolStripMenuItem.Enabled = true;
                 desconectarToolStripMenuItem.Enabled = false;
             }
-
         }
 
         private void Tbc_Aplicacoes_MouseDown(object sender, MouseEventArgs e)
@@ -232,13 +220,11 @@ namespace CursoWindowsForms
                 var vToolTip03 = DesenhaItemMenu("Apagar todas a direita", "DeleteRight");
                 var vToolTip04 = DesenhaItemMenu("Apagar todas exceta esta", "DeleteAll");
 
-
                 //Criando item de menu utilizando uma classe
                 ContextMenu.Items.Add(vToolTip01);
                 ContextMenu.Items.Add(vToolTip02);
                 ContextMenu.Items.Add(vToolTip03);
                 ContextMenu.Items.Add(vToolTip04);
-
 
                 ContextMenu.Show(this, new Point(posicaoX, posicaoY));
                 vToolTip01.Click += vToolTip01_Click;
@@ -319,9 +305,6 @@ namespace CursoWindowsForms
             {
                 MessageBox.Show("Cadastro de Usuario já aberto!");
             }
-
-            
-            
         }
 
         void ApagaAba(TabPage tb)

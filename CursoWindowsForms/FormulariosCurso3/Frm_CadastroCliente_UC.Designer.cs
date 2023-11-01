@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroCliente_UC));
             Lbl_Cpf = new Label();
             Txt_Cpf = new TextBox();
             Lbl_NomeCliente = new Label();
@@ -61,16 +62,23 @@
             Grp_TemPai = new GroupBox();
             Chk_TemPai = new CheckBox();
             Grp_Endereco = new GroupBox();
+            Cmb_Estado = new ComboBox();
             Txt_Cidade = new TextBox();
             Lbl_Cidade = new Label();
             Grp_Outros = new GroupBox();
-            Cmb_Estado = new ComboBox();
+            Tls_Principal = new ToolStrip();
+            novaToolStripButton = new ToolStripButton();
+            abrirToolStripButton = new ToolStripButton();
+            salvarToolStripButton = new ToolStripButton();
+            apagarToolStripButton1 = new ToolStripButton();
+            limparToolStripButton2 = new ToolStripButton();
             Grp_Codigo.SuspendLayout();
             Grp_DadosPessoais.SuspendLayout();
             Grp_Genero.SuspendLayout();
             Grp_TemPai.SuspendLayout();
             Grp_Endereco.SuspendLayout();
             Grp_Outros.SuspendLayout();
+            Tls_Principal.SuspendLayout();
             SuspendLayout();
             // 
             // Lbl_Cpf
@@ -81,7 +89,6 @@
             Lbl_Cpf.Size = new Size(50, 20);
             Lbl_Cpf.TabIndex = 0;
             Lbl_Cpf.Text = "label1";
-            Lbl_Cpf.Click += Lbl_Cpf_Click;
             // 
             // Txt_Cpf
             // 
@@ -89,8 +96,7 @@
             Txt_Cpf.Location = new Point(485, 98);
             Txt_Cpf.Name = "Txt_Cpf";
             Txt_Cpf.Size = new Size(261, 27);
-            Txt_Cpf.TabIndex = 6;
-            Txt_Cpf.TextChanged += Txt_Cpf_TextChanged;
+            Txt_Cpf.TabIndex = 4;
             // 
             // Lbl_NomeCliente
             // 
@@ -125,9 +131,8 @@
             Txt_NomePai.BorderStyle = BorderStyle.FixedSingle;
             Txt_NomePai.Location = new Point(6, 151);
             Txt_NomePai.Name = "Txt_NomePai";
-            Txt_NomePai.Size = new Size(473, 27);
-            Txt_NomePai.TabIndex = 4;
-            Txt_NomePai.TextChanged += Txt_NomePai_TextChanged;
+            Txt_NomePai.Size = new Size(466, 27);
+            Txt_NomePai.TabIndex = 5;
             // 
             // Lbl_NomeMae
             // 
@@ -144,7 +149,7 @@
             Txt_NomeMae.BorderStyle = BorderStyle.FixedSingle;
             Txt_NomeMae.Location = new Point(6, 98);
             Txt_NomeMae.Name = "Txt_NomeMae";
-            Txt_NomeMae.Size = new Size(473, 27);
+            Txt_NomeMae.Size = new Size(466, 27);
             Txt_NomeMae.TabIndex = 3;
             // 
             // Txt_Cep
@@ -152,8 +157,9 @@
             Txt_Cep.BorderStyle = BorderStyle.FixedSingle;
             Txt_Cep.Location = new Point(6, 46);
             Txt_Cep.Name = "Txt_Cep";
-            Txt_Cep.Size = new Size(138, 27);
-            Txt_Cep.TabIndex = 7;
+            Txt_Cep.Size = new Size(194, 27);
+            Txt_Cep.TabIndex = 10;
+            Txt_Cep.Leave += Txt_Cep_Leave;
             // 
             // Lbl_Cep
             // 
@@ -163,20 +169,19 @@
             Lbl_Cep.Size = new Size(50, 20);
             Lbl_Cep.TabIndex = 10;
             Lbl_Cep.Text = "label1";
-            Lbl_Cep.Click += Lbl_Cep_Click;
             // 
             // Txt_Logradouro
             // 
             Txt_Logradouro.BorderStyle = BorderStyle.FixedSingle;
-            Txt_Logradouro.Location = new Point(6, 102);
+            Txt_Logradouro.Location = new Point(394, 106);
             Txt_Logradouro.Name = "Txt_Logradouro";
-            Txt_Logradouro.Size = new Size(740, 27);
-            Txt_Logradouro.TabIndex = 10;
+            Txt_Logradouro.Size = new Size(352, 27);
+            Txt_Logradouro.TabIndex = 13;
             // 
             // Lbl_Logradouro
             // 
             Lbl_Logradouro.AutoSize = true;
-            Lbl_Logradouro.Location = new Point(6, 79);
+            Lbl_Logradouro.Location = new Point(394, 83);
             Lbl_Logradouro.Name = "Lbl_Logradouro";
             Lbl_Logradouro.Size = new Size(50, 20);
             Lbl_Logradouro.TabIndex = 12;
@@ -185,38 +190,36 @@
             // Txt_Complemento
             // 
             Txt_Complemento.BorderStyle = BorderStyle.FixedSingle;
-            Txt_Complemento.Location = new Point(416, 46);
+            Txt_Complemento.Location = new Point(6, 106);
             Txt_Complemento.Name = "Txt_Complemento";
-            Txt_Complemento.Size = new Size(330, 27);
-            Txt_Complemento.TabIndex = 9;
+            Txt_Complemento.Size = new Size(380, 27);
+            Txt_Complemento.TabIndex = 12;
             // 
             // Lbl_Complemento
             // 
             Lbl_Complemento.AutoSize = true;
-            Lbl_Complemento.Location = new Point(416, 23);
+            Lbl_Complemento.Location = new Point(6, 76);
             Lbl_Complemento.Name = "Lbl_Complemento";
             Lbl_Complemento.Size = new Size(50, 20);
             Lbl_Complemento.TabIndex = 14;
             Lbl_Complemento.Text = "label1";
-            Lbl_Complemento.Click += Lbl_Complemento_Click;
             // 
             // Txt_Bairro
             // 
             Txt_Bairro.BorderStyle = BorderStyle.FixedSingle;
-            Txt_Bairro.Location = new Point(150, 46);
+            Txt_Bairro.Location = new Point(213, 46);
             Txt_Bairro.Name = "Txt_Bairro";
-            Txt_Bairro.Size = new Size(260, 27);
-            Txt_Bairro.TabIndex = 8;
+            Txt_Bairro.Size = new Size(533, 27);
+            Txt_Bairro.TabIndex = 11;
             // 
             // Lbl_Bairro
             // 
             Lbl_Bairro.AutoSize = true;
-            Lbl_Bairro.Location = new Point(150, 23);
+            Lbl_Bairro.Location = new Point(213, 23);
             Lbl_Bairro.Name = "Lbl_Bairro";
             Lbl_Bairro.Size = new Size(50, 20);
             Lbl_Bairro.TabIndex = 16;
             Lbl_Bairro.Text = "label1";
-            Lbl_Bairro.Click += Lbl_Bairro_Click;
             // 
             // Txt_Profissao
             // 
@@ -224,7 +227,7 @@
             Txt_Profissao.Location = new Point(6, 48);
             Txt_Profissao.Name = "Txt_Profissao";
             Txt_Profissao.Size = new Size(740, 27);
-            Txt_Profissao.TabIndex = 13;
+            Txt_Profissao.TabIndex = 16;
             // 
             // Lbl_Profissao
             // 
@@ -234,7 +237,6 @@
             Lbl_Profissao.Size = new Size(50, 20);
             Lbl_Profissao.TabIndex = 20;
             Lbl_Profissao.Text = "label1";
-            Lbl_Profissao.Click += Lbl_Profissao_Click;
             // 
             // Txt_RendaFamiliar
             // 
@@ -242,7 +244,7 @@
             Txt_RendaFamiliar.Location = new Point(364, 101);
             Txt_RendaFamiliar.Name = "Txt_RendaFamiliar";
             Txt_RendaFamiliar.Size = new Size(382, 27);
-            Txt_RendaFamiliar.TabIndex = 15;
+            Txt_RendaFamiliar.TabIndex = 18;
             // 
             // Lbl_RendaFamiliar
             // 
@@ -259,8 +261,7 @@
             Txt_Telefone.Location = new Point(6, 101);
             Txt_Telefone.Name = "Txt_Telefone";
             Txt_Telefone.Size = new Size(352, 27);
-            Txt_Telefone.TabIndex = 14;
-            Txt_Telefone.TextChanged += textBox1_TextChanged;
+            Txt_Telefone.TabIndex = 17;
             // 
             // Lbl_Telefone
             // 
@@ -274,20 +275,19 @@
             // Txt_Codigo
             // 
             Txt_Codigo.BorderStyle = BorderStyle.FixedSingle;
-            Txt_Codigo.Location = new Point(0, 26);
+            Txt_Codigo.Location = new Point(6, 26);
             Txt_Codigo.Name = "Txt_Codigo";
-            Txt_Codigo.Size = new Size(746, 27);
+            Txt_Codigo.Size = new Size(740, 27);
             Txt_Codigo.TabIndex = 1;
             // 
             // Grp_Codigo
             // 
             Grp_Codigo.Controls.Add(Txt_Codigo);
-            Grp_Codigo.Location = new Point(15, 16);
+            Grp_Codigo.Location = new Point(21, 53);
             Grp_Codigo.Name = "Grp_Codigo";
-            Grp_Codigo.Size = new Size(774, 64);
+            Grp_Codigo.Size = new Size(767, 64);
             Grp_Codigo.TabIndex = 28;
             Grp_Codigo.TabStop = false;
-            Grp_Codigo.Text = "groupBox1";
             // 
             // Grp_DadosPessoais
             // 
@@ -301,12 +301,11 @@
             Grp_DadosPessoais.Controls.Add(Lbl_NomePai);
             Grp_DadosPessoais.Controls.Add(Lbl_Cpf);
             Grp_DadosPessoais.Controls.Add(Txt_Cpf);
-            Grp_DadosPessoais.Location = new Point(15, 86);
+            Grp_DadosPessoais.Location = new Point(21, 123);
             Grp_DadosPessoais.Name = "Grp_DadosPessoais";
-            Grp_DadosPessoais.Size = new Size(774, 247);
+            Grp_DadosPessoais.Size = new Size(767, 285);
             Grp_DadosPessoais.TabIndex = 29;
             Grp_DadosPessoais.TabStop = false;
-            Grp_DadosPessoais.Text = "groupBox1";
             // 
             // Grp_Genero
             // 
@@ -314,19 +313,18 @@
             Grp_Genero.Controls.Add(Rdb_Masculino);
             Grp_Genero.Controls.Add(Rdb_Outro);
             Grp_Genero.Controls.Add(Rdb_Feminino);
-            Grp_Genero.Location = new Point(485, 151);
+            Grp_Genero.Location = new Point(6, 184);
             Grp_Genero.Name = "Grp_Genero";
-            Grp_Genero.Size = new Size(289, 99);
+            Grp_Genero.Size = new Size(752, 84);
             Grp_Genero.TabIndex = 13;
             Grp_Genero.TabStop = false;
-            Grp_Genero.Text = "groupBox1";
             // 
             // Txt_OutroGenero
             // 
             Txt_OutroGenero.BorderStyle = BorderStyle.FixedSingle;
-            Txt_OutroGenero.Location = new Point(10, 66);
+            Txt_OutroGenero.Location = new Point(345, 23);
             Txt_OutroGenero.Name = "Txt_OutroGenero";
-            Txt_OutroGenero.Size = new Size(251, 27);
+            Txt_OutroGenero.Size = new Size(395, 27);
             Txt_OutroGenero.TabIndex = 13;
             // 
             // Rdb_Masculino
@@ -335,7 +333,7 @@
             Rdb_Masculino.Location = new Point(10, 26);
             Rdb_Masculino.Name = "Rdb_Masculino";
             Rdb_Masculino.Size = new Size(43, 24);
-            Rdb_Masculino.TabIndex = 11;
+            Rdb_Masculino.TabIndex = 7;
             Rdb_Masculino.TabStop = true;
             Rdb_Masculino.Text = "M";
             Rdb_Masculino.UseVisualStyleBackColor = true;
@@ -343,10 +341,10 @@
             // Rdb_Outro
             // 
             Rdb_Outro.AutoSize = true;
-            Rdb_Outro.Location = new Point(120, 26);
+            Rdb_Outro.Location = new Point(271, 26);
             Rdb_Outro.Name = "Rdb_Outro";
             Rdb_Outro.Size = new Size(68, 24);
-            Rdb_Outro.TabIndex = 12;
+            Rdb_Outro.TabIndex = 9;
             Rdb_Outro.TabStop = true;
             Rdb_Outro.Text = "Outro";
             Rdb_Outro.UseVisualStyleBackColor = true;
@@ -355,10 +353,10 @@
             // Rdb_Feminino
             // 
             Rdb_Feminino.AutoSize = true;
-            Rdb_Feminino.Location = new Point(68, 26);
+            Rdb_Feminino.Location = new Point(139, 26);
             Rdb_Feminino.Name = "Rdb_Feminino";
             Rdb_Feminino.Size = new Size(37, 24);
-            Rdb_Feminino.TabIndex = 10;
+            Rdb_Feminino.TabIndex = 8;
             Rdb_Feminino.TabStop = true;
             Rdb_Feminino.Text = "F";
             Rdb_Feminino.UseVisualStyleBackColor = true;
@@ -366,9 +364,9 @@
             // Grp_TemPai
             // 
             Grp_TemPai.Controls.Add(Chk_TemPai);
-            Grp_TemPai.Location = new Point(6, 184);
+            Grp_TemPai.Location = new Point(485, 151);
             Grp_TemPai.Name = "Grp_TemPai";
-            Grp_TemPai.Size = new Size(180, 27);
+            Grp_TemPai.Size = new Size(261, 27);
             Grp_TemPai.TabIndex = 9;
             Grp_TemPai.TabStop = false;
             // 
@@ -378,7 +376,7 @@
             Chk_TemPai.Location = new Point(16, 3);
             Chk_TemPai.Name = "Chk_TemPai";
             Chk_TemPai.Size = new Size(101, 24);
-            Chk_TemPai.TabIndex = 0;
+            Chk_TemPai.TabIndex = 6;
             Chk_TemPai.Text = "checkBox1";
             Chk_TemPai.UseVisualStyleBackColor = true;
             Chk_TemPai.CheckedChanged += Chk_TemPai_CheckedChanged;
@@ -396,20 +394,29 @@
             Grp_Endereco.Controls.Add(Txt_Complemento);
             Grp_Endereco.Controls.Add(Lbl_Cep);
             Grp_Endereco.Controls.Add(Txt_Cep);
-            Grp_Endereco.Location = new Point(15, 350);
+            Grp_Endereco.Location = new Point(21, 414);
             Grp_Endereco.Name = "Grp_Endereco";
-            Grp_Endereco.Size = new Size(774, 192);
+            Grp_Endereco.Size = new Size(767, 192);
             Grp_Endereco.TabIndex = 30;
             Grp_Endereco.TabStop = false;
-            Grp_Endereco.Text = "groupBox1";
+            // 
+            // Cmb_Estado
+            // 
+            Cmb_Estado.BackColor = Color.White;
+            Cmb_Estado.FormattingEnabled = true;
+            Cmb_Estado.Items.AddRange(new object[] { "Acre (AC)", "Alagoas (AL)", "Amapá (AP)", "Amazonas (AM)", "Bahia (BA)", "Ceará (CE)", "Distrito Federal (DF)", "Espírito Santo (ES)", "Goiás (GO)", "Maranhão (MA)", "Mato Grosso (MT)", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)", "Pará (PA)", "Paraíba (PB)", "Paraná (PR)", "Pernambuco(PE)", "Piauí (PI)", "Rio de Janeiro (RJ)", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rondônia (RO)", "Roraima (RR)", "Santa Catarina (SC)", "São Paulo (SP)", "Sergipe (SE)", "Tocantins (TO)" });
+            Cmb_Estado.Location = new Point(414, 159);
+            Cmb_Estado.Name = "Cmb_Estado";
+            Cmb_Estado.Size = new Size(202, 28);
+            Cmb_Estado.TabIndex = 15;
             // 
             // Txt_Cidade
             // 
             Txt_Cidade.BorderStyle = BorderStyle.FixedSingle;
             Txt_Cidade.Location = new Point(6, 159);
             Txt_Cidade.Name = "Txt_Cidade";
-            Txt_Cidade.Size = new Size(348, 27);
-            Txt_Cidade.TabIndex = 11;
+            Txt_Cidade.Size = new Size(391, 27);
+            Txt_Cidade.TabIndex = 14;
             // 
             // Lbl_Cidade
             // 
@@ -428,32 +435,84 @@
             Grp_Outros.Controls.Add(Txt_Telefone);
             Grp_Outros.Controls.Add(Txt_Profissao);
             Grp_Outros.Controls.Add(Lbl_Profissao);
-            Grp_Outros.Location = new Point(21, 541);
+            Grp_Outros.Location = new Point(21, 601);
             Grp_Outros.Name = "Grp_Outros";
-            Grp_Outros.Size = new Size(774, 143);
+            Grp_Outros.Size = new Size(761, 143);
             Grp_Outros.TabIndex = 31;
             Grp_Outros.TabStop = false;
             Grp_Outros.Text = " ";
             // 
-            // Cmb_Estado
+            // Tls_Principal
             // 
-            Cmb_Estado.FormattingEnabled = true;
-            Cmb_Estado.Items.AddRange(new object[] { "Acre (AC)", "Alagoas (AL)", "Amapá (AP)", "Amazonas (AM)", "Bahia (BA)", "Ceará (CE)", "Distrito Federal (DF)", "Espírito Santo (ES)", "Goiás (GO)", "Maranhão (MA)", "Mato Grosso (MT)", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)", "Pará (PA)", "Paraíba (PB)", "Paraná (PR)", "Pernambuco(PE)", "Piauí (PI)", "Rio de Janeiro (RJ)", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rondônia (RO)", "Roraima (RR)", "Santa Catarina (SC)", "São Paulo (SP)", "Sergipe (SE)", "Tocantins (TO)" });
-            Cmb_Estado.Location = new Point(366, 157);
-            Cmb_Estado.Name = "Cmb_Estado";
-            Cmb_Estado.Size = new Size(151, 28);
-            Cmb_Estado.TabIndex = 21;
+            Tls_Principal.ImageScalingSize = new Size(20, 20);
+            Tls_Principal.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, apagarToolStripButton1, limparToolStripButton2 });
+            Tls_Principal.Location = new Point(0, 0);
+            Tls_Principal.Name = "Tls_Principal";
+            Tls_Principal.Size = new Size(791, 27);
+            Tls_Principal.TabIndex = 32;
+            Tls_Principal.Text = "toolStrip1";
+            // 
+            // novaToolStripButton
+            // 
+            novaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            novaToolStripButton.Image = (Image)resources.GetObject("novaToolStripButton.Image");
+            novaToolStripButton.ImageTransparentColor = Color.Magenta;
+            novaToolStripButton.Name = "novaToolStripButton";
+            novaToolStripButton.Size = new Size(29, 24);
+            novaToolStripButton.Text = "&Nova";
+            novaToolStripButton.Click += novaToolStripButton_Click;
+            // 
+            // abrirToolStripButton
+            // 
+            abrirToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            abrirToolStripButton.Image = (Image)resources.GetObject("abrirToolStripButton.Image");
+            abrirToolStripButton.ImageTransparentColor = Color.Magenta;
+            abrirToolStripButton.Name = "abrirToolStripButton";
+            abrirToolStripButton.Size = new Size(29, 24);
+            abrirToolStripButton.Text = "&Abrir";
+            abrirToolStripButton.Click += abrirToolStripButton_Click;
+            // 
+            // salvarToolStripButton
+            // 
+            salvarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            salvarToolStripButton.Image = (Image)resources.GetObject("salvarToolStripButton.Image");
+            salvarToolStripButton.ImageTransparentColor = Color.Magenta;
+            salvarToolStripButton.Name = "salvarToolStripButton";
+            salvarToolStripButton.Size = new Size(29, 24);
+            salvarToolStripButton.Text = "&Salvar";
+            salvarToolStripButton.Click += salvarToolStripButton_Click;
+            // 
+            // apagarToolStripButton1
+            // 
+            apagarToolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            apagarToolStripButton1.Image = Properties.Resources.lixo;
+            apagarToolStripButton1.ImageTransparentColor = Color.Magenta;
+            apagarToolStripButton1.Name = "apagarToolStripButton1";
+            apagarToolStripButton1.Size = new Size(29, 24);
+            apagarToolStripButton1.Text = "toolStripButton1";
+            apagarToolStripButton1.Click += apagarToolStripButton1_Click;
+            // 
+            // limparToolStripButton2
+            // 
+            limparToolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            limparToolStripButton2.Image = Properties.Resources.limpeza_de_dados;
+            limparToolStripButton2.ImageTransparentColor = Color.Magenta;
+            limparToolStripButton2.Name = "limparToolStripButton2";
+            limparToolStripButton2.Size = new Size(29, 24);
+            limparToolStripButton2.Text = "toolStripButton2";
+            limparToolStripButton2.Click += limparToolStripButton2_Click;
             // 
             // Frm_CadastroCliente_UC
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(Tls_Principal);
             Controls.Add(Grp_Outros);
             Controls.Add(Grp_Endereco);
             Controls.Add(Grp_DadosPessoais);
             Controls.Add(Grp_Codigo);
             Name = "Frm_CadastroCliente_UC";
-            Size = new Size(814, 716);
+            Size = new Size(791, 747);
             Grp_Codigo.ResumeLayout(false);
             Grp_Codigo.PerformLayout();
             Grp_DadosPessoais.ResumeLayout(false);
@@ -466,7 +525,10 @@
             Grp_Endereco.PerformLayout();
             Grp_Outros.ResumeLayout(false);
             Grp_Outros.PerformLayout();
+            Tls_Principal.ResumeLayout(false);
+            Tls_Principal.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -508,5 +570,11 @@
         private GroupBox Grp_Genero;
         private TextBox Txt_OutroGenero;
         private ComboBox Cmb_Estado;
+        private ToolStrip Tls_Principal;
+        private ToolStripButton novaToolStripButton;
+        private ToolStripButton abrirToolStripButton;
+        private ToolStripButton salvarToolStripButton;
+        private ToolStripButton apagarToolStripButton1;
+        private ToolStripButton limparToolStripButton2;
     }
 }

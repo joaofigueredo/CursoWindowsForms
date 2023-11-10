@@ -28,5 +28,11 @@ namespace CursoWindowsFormsBiblioteca.Classes
             //metodo para desserialização 
             return JsonConvert.DeserializeObject<Unit>(vJson);
         }
+
+        public static string SerializarClasseUnit(Unit unit)
+        {
+            //metodo para serialização 
+            return JsonConvert.SerializeObject(unit);
+        }
     }
 }

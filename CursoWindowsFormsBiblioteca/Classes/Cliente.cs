@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using CursoWindowsFormsBiblioteca;
+using Newtonsoft.Json;
+using CursoWindowsFormsBiblioteca.DataBases;
 
 namespace CursoWindowsFormsBiblioteca.Classes
 {
@@ -79,11 +81,11 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
             public void ValidaComplemento()
             {
-                if(this.NomePai == this.NomeMae)
+                
+                if (this.NomePai == this.NomeMae)
                 {
                     throw new Exception("Nome da mãe não pode ser igual ao nome do pai!");
                 }
-
                 if(this.NaoTemPai == false)
                 {
                     if(this.NomePai == "")
@@ -99,11 +101,112 @@ namespace CursoWindowsFormsBiblioteca.Classes
                     throw new Exception("Cpf invalido!");
                 }
             }
+
+            #region "Crud do fichario"
+            public void IncluirFichario(string conexao)
+            {
+
+                string clienteJson = Cliente.SerializarClasseUnit(this);
+                Fichario f = new Fichario(conexao);
+                if (f.status)
+                {
+                    f.Incluir(this.Id, clienteJson);
+                    if (!(f.status))
+                    {
+                        throw new Exception(f.mensagem);
+                    }
+                }
+                else
+                {
+                    throw new Exception(f.mensagem);
+                }
+            }
+
+            public Unit BuscarFichario(string id, string conexao)
+            {
+                Fichario f = new Fichario(conexao);
+                if (f.status)
+                {
+                    string clienteJson = f.Buscar(id);
+                    return Cliente.DesSerializarClasseUnit(clienteJson);
+                }
+                else
+                {
+                    throw new Exception(f.mensagem);
+                }
+
+            }
+
+            public void AlterarFichario(string conexao)
+            {
+                string clienteJson = Cliente.SerializarClasseUnit(this);
+                Fichario f = new Fichario(conexao);
+                if (f.status)
+                {
+                    f.Alterar(this.Id, clienteJson);
+                    if (!(f.status))
+                    {
+                        throw new Exception(f.mensagem);
+                    }
+
+                }
+                else
+                {
+                    throw new Exception(f.mensagem);
+                }
+            }
+
+            public void ApagarFichario(string conexao)
+            {
+                Fichario f = new Fichario(conexao);
+                if (f.status)
+                {
+                   f.Apagar(this.Id); 
+                    if (!(f.status))
+                    {
+                        throw new Exception(f.mensagem);
+                    }
+
+                }
+                else
+                {
+                    throw new Exception(f.mensagem);
+                }
+            }
+
+            public List<string> ListaFichario(string conexao)
+            {
+                Fichario f = new Fichario(conexao);
+                if (f.status)
+                {
+                    List<string> todosJson = f.BuscarTodos();
+                    return todosJson;
+                }
+                else
+                {
+                    throw new Exception(f.mensagem);
+                }
+            }
+
+            #endregion
         }
+
+
 
         public class List
         {
             public List<Unit> ListUnit { get; set; }
+        }
+
+        public static string SerializarClasseUnit(Unit unit)
+        {
+            //metodo para serialização 
+            return JsonConvert.SerializeObject(unit); 
+        }
+        public static Unit DesSerializarClasseUnit(string vJson)
+        {
+            //metodo para desserialização 
+            return JsonConvert.DeserializeObject<Unit>(vJson);
         }
     }
 }

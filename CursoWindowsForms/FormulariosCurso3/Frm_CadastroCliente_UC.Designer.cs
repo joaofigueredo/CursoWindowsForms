@@ -72,6 +72,7 @@
             salvarToolStripButton = new ToolStripButton();
             apagarToolStripButton1 = new ToolStripButton();
             limparToolStripButton2 = new ToolStripButton();
+            btn_Busca = new Button();
             Grp_Codigo.SuspendLayout();
             Grp_DadosPessoais.SuspendLayout();
             Grp_Genero.SuspendLayout();
@@ -277,15 +278,16 @@
             Txt_Codigo.BorderStyle = BorderStyle.FixedSingle;
             Txt_Codigo.Location = new Point(6, 26);
             Txt_Codigo.Name = "Txt_Codigo";
-            Txt_Codigo.Size = new Size(740, 27);
+            Txt_Codigo.Size = new Size(233, 27);
             Txt_Codigo.TabIndex = 1;
             // 
             // Grp_Codigo
             // 
+            Grp_Codigo.Controls.Add(btn_Busca);
             Grp_Codigo.Controls.Add(Txt_Codigo);
             Grp_Codigo.Location = new Point(21, 53);
             Grp_Codigo.Name = "Grp_Codigo";
-            Grp_Codigo.Size = new Size(767, 64);
+            Grp_Codigo.Size = new Size(358, 64);
             Grp_Codigo.TabIndex = 28;
             Grp_Codigo.TabStop = false;
             // 
@@ -502,6 +504,16 @@
             limparToolStripButton2.Text = "toolStripButton2";
             limparToolStripButton2.Click += limparToolStripButton2_Click;
             // 
+            // btn_Busca
+            // 
+            btn_Busca.Location = new Point(251, 26);
+            btn_Busca.Name = "btn_Busca";
+            btn_Busca.Size = new Size(94, 27);
+            btn_Busca.TabIndex = 2;
+            btn_Busca.Text = "Buscar";
+            btn_Busca.UseVisualStyleBackColor = true;
+            btn_Busca.Click += btn_Busca_Click;
+            // 
             // Frm_CadastroCliente_UC
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -576,5 +588,6 @@
         private ToolStripButton salvarToolStripButton;
         private ToolStripButton apagarToolStripButton1;
         private ToolStripButton limparToolStripButton2;
+        private Button btn_Busca;
     }
 }
